@@ -13,7 +13,16 @@ type Coo = {
   name: string
   gender: number
 }
-
+let a: Foo & Bar = {
+  name:"",
+  age: "",
+  gender: 11
+}
+let b: Foo | Bar = {
+  name: "",
+  age: ""
+}
+let c: keyof Foo
 type cases = [
   Expect<Equal<Diff<Foo, Bar>, { gender: number }>>,
   Expect<Equal<Diff<Bar, Foo>, { gender: number }>>,
